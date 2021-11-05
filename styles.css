@@ -1322,4 +1322,18 @@ sl-button.btn::part(base):hover{
     #s3heading{
         letter-spacing: .1em;
     }
+    #wallHead{
+        letter-spacing: .1em;
+    }
+    .line{
+        position: absolute;
+        border-left: 4px solid rgb(29, 29, 29);
+        height: 90px;
+        top:325%;
+        left: 50%;
+        z-index: 2;
+    }
+    .line2{
+        display:none;
+    }
     }
