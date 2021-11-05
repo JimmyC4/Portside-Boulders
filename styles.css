@@ -1069,7 +1069,7 @@ sl-button.btn::part(base):hover{
         object-fit:cover;
         overflow-x:visible;
         top:0;
-        width:180vw;
+        width:215vw;
         height: 100vh; 
     }
     .image{
