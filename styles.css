@@ -1,0 +1,1387 @@
+*{
+    box-sizing: border-box; 
+    scroll-behavior:smooth;
+    /* stops overflow */
+}
+body{
+    margin:0;
+    padding:0;
+    background-color: rgb(239, 236, 232);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    letter-spacing: .1em;
+}
+
+/* HAMBURGER MENU */
+.hamburger{
+    z-index:20;
+}
+.menu{
+    z-index:0;
+    position: fixed;
+    width: 45px;
+    height: 30px;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
+}
+.bar{
+    height: 4px;
+    width: 45px;
+    background-color: rgb(20, 20, 20);
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.bar1 {
+    transform: translateY(-8px)
+}
+.bar3 {
+    transform: translateY(+8px)
+}
+/* Change bars from 3 horizontal lines to 2 diagonal lines */
+.change .bar{
+    background-color: white;
+    height: 5px;
+}
+.change .bar1{
+    transform: translateY(4px) rotateZ(-45deg);
+}
+.change .bar2{
+    opacity: 0%;
+    transition: 0.1s ease;
+}
+.change .bar3{
+    transform: translateY(-6px) rotateZ(45deg);
+}
+.change {
+    display:block;
+}
+/* Link styling */
+a{
+    text-decoration: none;
+}
+.nav li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.nav li{
+    list-style: none;
+    padding: 10px 0px;
+}
+/* Hiding hamburger menu options */
+.nav{
+    font-weight: 500;
+    position: fixed;
+    right: -22%;
+    top: 7%;
+    padding:0;
+    margin: 0 0px;
+    transition: .75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/* Moving hidden hamburger menu options left */
+.change-nav{
+    position: fixed;
+    right: 1.5%;
+    top: 7%;
+    padding:0;
+    margin: 0 20px;
+    transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.nav li a:hover{
+    color: #1A8AE0;
+    text-align: left;
+}
+/* FontAwesome Icons can change colour when hovered */
+.fa-instagram{
+    transition: all .1s ease-in-out;
+    position: absolute;
+    font-size:3rem;
+    color: white;
+    top: 640px;
+    right: 167px;
+}
+.fa-instagram:hover{
+    scale: 105%;
+    color:#1A8AE0;
+    cursor: pointer;
+}
+.fa-facebook-f{
+    transition: all .1s ease-in-out;
+    position: absolute;
+    font-size:2.4rem;
+    color: white;
+    top: 645px;
+    right: 123px;
+}
+.fa-facebook-f:hover{
+    scale: 105%;
+    color: #1A8AE0;
+    cursor: pointer;
+}
+/* Hidden navigation menu body */
+.menu-box{
+    right:-350px;
+    position: fixed;
+    background-color: #D7652B;
+    height: 100vh;
+    width: 350px;
+    transition: .75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index:200;
+}
+.change-menu-box{
+    right:-70px;
+    position: fixed;
+    background-color: #D7652B;
+    height: 100vh;
+    width: 352px;
+    transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/* No select option for my html DOMS to not be selected eg. Hero image, navigation options */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+.large-container{
+    display: block;
+}
+
+/* END OF HAMBURGER MENU */
+
+/*  --------------- SECTION 1 ---------------*/
+/* CSS Scroll Down Animation with CSS Keyframes! */
+.scroll-down{
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+    height: 50px;
+    width: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    position:absolute;
+    left:50%;
+    top: 92%;
+    border-radius: 50px;
+    z-index: 10;
+}
+.scroll-down:hover{
+    transform: scale(1.1);
+}
+.scroll-down::before,
+.scroll-down::after{
+    content:'';
+    position: absolute;
+    top:10%;
+    left:50%;
+    border: 2px solid rgb(255, 255, 255);
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::after{
+    top:20%;
+    animation-delay: .3s;
+}
+@keyframes scroll-down{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 90%;
+    }
+}
+/* Basic styling */
+.logo{
+    position: absolute;
+    left:3.7%;
+    bottom:46%;
+    width: 20%;
+    z-index:2;
+}
+.heading{
+    color:white;
+    position: absolute;
+    left:5%;
+    bottom: 25%;
+    font-size: 6.8vw;
+    letter-spacing: -5px;
+}
+.heading2{
+    color:white;
+    position: absolute;
+    left:5%;
+    bottom: 14%;
+    font-size: 6vw;
+    letter-spacing: -5px;
+}
+.woman1, .woman2 {
+    filter: saturate(80%);
+    position: absolute;
+    left: 0;
+    top:0;
+    width:100vw;
+    height: 100vh;
+    object-fit: cover;  
+    overflow:hidden;
+    
+}
+.hold4{
+    position:absolute;
+    width:30vw;
+    right:0;
+    top:345%;
+    z-index: -3; 
+}
+.member-img{
+    filter: saturate(800%);
+}
+/* .first-time{
+    position: absolute;
+    left:5%;
+    bottom:12%;
+    width: 15vw;
+    z-index:2;
+} */
+.background{
+    filter: brightness(80%);
+    height: 100vh;
+    z-index:-2;
+    transform: scale(1.05);
+    overflow:hidden;
+}
+.background-zoom{
+    transform: scale(1);
+    transition: 1s ease-in-out;
+}
+/* --------------------- SECTION 1 --------------------- */
+.empty-space{
+    background: black;
+}
+.section1{
+    position: relative;
+    height: 100vh;
+    /* This setting broke my website a few times :,) */
+    /* scroll-snap-align: start; */
+    z-index: -1;
+    overflow:hidden;
+}
+
+.box {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(199, 184, 184);
+    top: 50px;
+}
+
+/* --------------------- SECTION 2 --------------------- */
+.section2{
+    position: relative;
+    height: 300vh;
+    overflow: hidden;
+}
+.topbar{
+    width:100vw;
+    height: 2vh;
+    background-color: #258edf;
+    position: absolute;
+}
+.image{
+    position: absolute;
+    right: 13%;
+    top:17%;
+    width:35vw;
+    height: 35vw;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.woman3{
+    width: 50%;
+    position:absolute;
+    transform: scale(4);
+    top:25%;
+    right: 35%;
+    z-index: -1;
+}
+h2{
+    color:rgb(20, 20, 20);
+    font-weight: 700;
+    font-size: 5vw;
+    letter-spacing: -1px;
+}
+p{
+    color:rgb(56, 56, 56);
+    font-size: 1.5vw;
+    font-weight:200;
+    letter-spacing: 0px;
+    line-height: 3.5vh;
+}
+.aboutus{
+    position: absolute;
+}
+
+.text{
+    position: absolute;
+    width: 40vw;
+    left:20vw;
+    top: 15vw;
+}
+.par{
+    position: absolute;
+    color: rgb(30, 30, 30);
+    font-size: .8em;
+    font-weight: 400;
+    width: 55%;
+    top:70%;
+}
+.hold1{
+    transform: rotate(-85deg);
+    position:absolute;
+    width: 35vw;
+    left:7.5%;
+    top:4%;
+    z-index: -1;
+}
+.hold2{
+    position:absolute;
+    width: 60vw;
+    left: 60%;
+    top:22%;
+    z-index: -1;
+}
+.hold3{
+    position:absolute;
+    transform: rotate(15deg);
+    width: 80vw;
+    left:-47%;
+    top:46%;
+    z-index: -1;
+    overflow:hidden;
+    filter: drop-shadow(2px 4px 2px #0000006c)
+}
+.walls h2{
+    color:rgb(20, 20, 20);
+    font-size:9vw;
+    height: 210vh;
+    width: 100vw;
+    letter-spacing: .05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+    bottom:130vh;
+    height: 18vh;
+}
+.container h1{
+    position:relative;
+    width:100%;
+    text-align: center;
+    /* border: solid 2px red; */
+    top:70vh;
+}
+
+.buttons{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 75vw;
+   margin:0;
+   position: relative;
+   top:28vh;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+/* Shoelace Components styling for 4 buttons */
+sl-button.press-button::part(base) {
+    /* Set design tokens for height and border width */
+    --sl-input-height-medium: 46px;
+    --sl-input-border-width: 0px;
+    
+    border-radius: 0;
+    background-color: #D7652B;
+    
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: var(--sl-transition-medium) transform ease, var(--sl-transition-medium) border ease;
+    }
+  sl-button.press-button::part(base):hover{
+      background-color:#ad5529;
+      cursor: pointer;
+  }
+  .image1, .image2, .image3, .image4{
+    transition: .5s ease-out;
+    position: absolute;
+    width:18vw;
+    height: 18vw;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.text2{
+    position: absolute;
+    width: 40%;
+    top:0%;
+    left:10%;
+}
+.image1, .circle1{
+    position: absolute;
+    background-color: #FF945E;
+    left: 7.5%;
+    bottom:32%;
+}
+.image2, .circle2{
+    position: absolute;
+    background-color: #ededed;
+    left: 30%;
+    bottom:32%;
+}
+.image3, .circle3{
+    position: absolute;
+    background-color: #ededed;
+    left: 52.5%;
+    bottom:32%;
+}
+.image4, .circle4{
+    position: absolute;
+    background-color: #ededed;
+    left: 75%;
+    bottom:32%;
+}
+.wallComplete{
+    position: absolute;
+    top:200%;
+}
+.cirlce1, .circle2, .circle3, .circle4{
+    display:block;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    position: absolute;
+    bottom:-100vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* These lines break up information, very simple */
+.line{
+    position: absolute;
+    border-left: 4px solid rgb(29, 29, 29);
+    height: 180px;
+    top:325%;
+    left: 50%;
+    z-index: 2;
+}
+.line2{
+    position: absolute;
+    border-left: 4px solid rgb(29, 29, 29);
+    height: 100px;
+    top:42%;
+    left: 50%;
+    z-index: 2;
+}
+
+/* --------------------- SECTION 3 --------------------- */
+
+.section3{
+    position: relative;
+    height: 105vh;
+    overflow: hidden;
+}
+/* SwiperJS styling */
+.swiper {
+    transition: all .1s ease-out;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    left: 75%;
+    top: 41.5%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+.swiper:hover{
+    transform: scale(1.02);
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+.swiper-container{
+    height: 200px;
+    width:200px; 
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+.swiper-slide{
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:50px;
+}
+.content3{
+    height: 100vh;
+}
+/* --------------------- SECTION 4 --------------------- */
+.container-s4{
+    position: relative;
+    top:2.5%;
+}
+.section4{
+    background-color: rgb(0, 137, 227);
+    height: 135vh;
+    width:100vw;
+    position:relative;
+    overflow:visible;
+}
+/* I boxed all the information for membership section */
+.box2{
+    color: white;
+    border-radius: 2%;
+    height: 103vh;
+    width: 35vw;
+    position: absolute;
+    top: 50px;
+    left:53%;
+}
+
+.box2 p, .box3 p{
+    font-weight: 300;
+    margin-left: 2%;
+    color: white;
+}
+.box3{
+    border-radius: 2%;
+    height: 80vh;
+    width: 35vw;
+    position: absolute;
+    top:61vh;
+    left:10%;
+}
+.basic, .midway, .yearly{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.basic img, .midway img, .yearly img{
+    width:30%;
+    margin:2%;
+}
+.break-line{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius:10%;
+    width:100%;
+    position: relative;
+}
+/* HAND ILLUSTRATION for MEMBERSHIP*/
+#memberships{
+  position: relative;
+  top:0;
+  left:0;
+}
+.illuscontain{
+    position: absolute;
+    overflow:visible;
+    width:28%;
+    left:14%;
+    top:-70px;
+}
+
+/* Hand needs to be visible/poking above section height */
+svg{
+    overflow:visible;
+}
+/* HAND AND CARD */
+#hand{
+    opacity: 1;
+    overflow:visible;
+}
+/* z-index paranoia  */
+.hand-el {
+    z-index: 1;
+}
+#thumb{
+    opacity: 1;
+}
+#card{
+    opacity: 1;  
+}
+#card-logo {
+    z-index: 1;
+}
+/* --------------------- SECTION 5 --------------------- */
+.section5{
+    position:relative;
+    height:80vh;
+}
+/* Footer styling */
+.footer{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 80%;
+    background-color:#D7652B;
+}
+.hours h1{
+    margin-top: 3%;
+    position:absolute;
+    top:0;
+    right:0;
+    color: white;
+    font-size:1em;
+    margin-right: 5%;
+}
+.hours p{
+    color: rgb(245, 245, 245);
+    font-weight: normal;
+    font-size:.6em;
+    text-align: right;
+    position:absolute;
+    top:13%;
+    right:0;
+    margin-top: 2%;
+    margin-right: 5%;
+}
+.hours p.hours2{
+    right:13%;
+    padding-right:2%;
+}
+.contacts{
+    color:white;
+    margin-left: 5%;
+    margin-top: 4%;
+    line-height: 5%;
+    font-size:.8em;
+}
+.contacts p{
+    color:white;
+    font-size: .8em;
+}
+/* Wish I worked with flexbox more with this website, next one will be better with more practice and planning */
+.logo-footer{
+    display:flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.flexboxcontainer{
+    position: absolute;
+    width:100%;
+    top:10%;
+}
+.logo-footer img{
+    margin-top:5%;
+    width:14%;
+    margin-bottom: 2%;
+}
+.logo-footer p{
+    margin-top:3%;
+    font-size:.8em;
+    color:white;
+}
+/* Contact button styling using shoelace component */
+sl-button.btn::part(base) {
+    /* Set design tokens for height and border width */
+    --sl-input-height-medium: 46px;
+    --sl-input-border-width: 0px;
+    
+    border-radius: 0;
+    background-color: #258edf;
+    
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: var(--sl-transition-medium) transform ease, var(--sl-transition-medium) border ease;
+}
+sl-button.btn::part(base):hover{
+      transform: scale(1.05);
+      background-color:#4caaf1;
+      cursor: pointer;
+}
+#fb{
+    position:relative;
+    top:-5px;
+    left:0.2%;
+    z-index: 1;
+}
+#inst{
+    position:relative;
+    top:16%;
+    left:-.1%;
+    z-index: 1;
+}
+
+/* ============RESPONSIVE DESIGN============= */
+
+/* ===== 5K RETINA MAC LABS: Media queries for Curtin Uni mac lab testing only ===== */
+@media only screen and (max-width: 5120px) {
+
+}
+/* ===== DESKTOP HD: Media queries for most HD desktops ===== */
+@media only screen and (max-width: 1920px) {
+    
+}
+/* ===== SMALL DESKTOP: Media queries for laptop/small desktop ===== */
+@media only screen and (max-width: 1366px) { 
+
+}
+/* ===== TABLET: Media queries for verticle and horizontal ===== */
+@media only screen and (max-width: 1024px) { 
+    .nav{
+        font-weight: 500;
+        position: fixed;
+        right: -34%;
+        top: 7%;
+        padding:0;
+        margin: 0 0px;
+        transition: .75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .change-nav{
+        position: fixed;
+        right: 3%;
+        top: 7%;
+        padding:0;
+        margin: 0 20px;
+        transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .woman1, .woman2 {
+        left: 0%;
+        object-fit:cover;
+
+        overflow-x:visible;
+        top:0;
+        width:150vw;
+        height: 100vh; 
+    }
+    .logo{
+        position: absolute;
+        left:3.7%;
+        bottom:50%;
+        z-index:2;
+    }
+    .heading{
+        color:white;
+        position: absolute;
+        left:5%;
+        bottom: 22%;
+        font-size: 11vw;
+        letter-spacing: -5px;
+    }
+    .heading2{
+        color:white;
+        position: absolute;
+        left:5%;
+        bottom: 13%;
+        font-size: 8vw;
+        letter-spacing: -5px;
+    }
+    .first-time{
+        position: absolute;
+        left:5%;
+        bottom:8%;
+        width: 25vw;
+        z-index:2;
+    }
+
+    .logo-footer p{
+        display: none;
+    }
+    .hours p.hours2{
+        right:20%;
+        padding-right:2%;
+    }
+    .btn{
+        top:25vh;
+        transform: scale(.7);
+    }
+}
+@media only screen and (max-width: 768px) { 
+    
+}
+/* ===== MOBILE: Media queries for small mobile resolution. ===== */
+@media only screen and (max-width: 640px) { 
+    .nav{     
+        font-weight: 500;
+        position: fixed;
+        right: -45%;
+        top: 7%;
+        padding:0;
+        margin: 0 0px;
+        transition: .75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .change-nav{
+        position: fixed;
+        right: 4%;
+        top: 7%;
+        padding:0;
+        margin: 0 20px;
+        transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .aboutus h2{
+        color:black;
+        font-weight: 700;
+        font-size: 12vw;
+        width:100vw;
+        letter-spacing: -5px;
+    }
+    .par{
+        position: absolute;
+        top:70%;
+        width:70vw;
+        font-size: 4vw;
+    }
+    .woman1, .woman2 {
+        left: 15%;
+        object-fit:cover;
+        overflow-x:visible;
+        top:0;
+        width:150vw;
+        height: 100vh; 
+    }
+    .image{
+        position: absolute;
+        right: 25%;
+        top:25%;
+        width:50vw;
+        height: 50vw;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+    .logo{
+        position: absolute;
+        left:3.7%;
+        bottom:73%;
+        width: 44vw;
+        z-index:2;
+    }
+
+    .logo img{
+        width: 10px;
+    }
+    .heading{
+        color:white;
+        position: absolute;
+        left:5%;
+        bottom: 13.8%;
+        font-size: 18vw;
+        letter-spacing: -5px;
+    }
+    .heading2{
+        color:white;
+        position: absolute;
+        left:5%;
+        bottom: 10%;
+        font-size: 12vw;
+        letter-spacing: -5px;
+    }
+    .first-time{
+        position: absolute;
+        left:5%;
+        bottom:7%;
+        width: 40vw;
+        z-index:2;
+    }
+    
+    .line2{
+        opacity:0;
+    }
+    .bar{
+        background-color: #000000;
+    }
+    .hold1{
+        transform: rotate(-85deg);
+        position:absolute;
+        width: 70vw;
+        left:-16%;
+        top:5%;
+        z-index: -1;
+    }
+    .hold2{
+        position:absolute;
+        width: 105vw;
+        right: -10%;
+        top:22%;
+        z-index: -1;
+    }
+    .description{
+        font-size: 5vw;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+        position: absolute;
+        bottom:-101vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .container h1{
+        position:relative;
+        width:100%;
+        text-align: center;
+        top:45vh;
+    }
+    .hold4{
+        position:absolute;
+        width:55vw;
+        right:0;
+        top:290%;
+        z-index: -3;
+    }
+    .swiper {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        left: 50%;
+        top: 100%;
+        margin-left: -150px;
+        margin-top: -150px;
+    }
+    .text2 p{
+        font-size: .8em;
+        width:80vw;
+    }
+    .section3{
+        height: 125vh;
+    }
+    .section4{
+        background-color: rgb(0, 137, 227);
+        height: 180vh;
+        width:100vw;
+        position:relative;
+        overflow:visible;
+        top:200px;
+    }
+
+    .box2{
+        border-radius: 2%;
+        height: 103vh;
+        width: 80vw;
+        position: absolute;
+        left:-10%;
+        overflow:visible;
+    }
+    .box3{
+        border-radius: 2%;
+        height: 80vh;
+        width: 80vw;
+        position: absolute;
+        top:108vh;
+        left:-10%;
+        overflow:visible;
+    }
+    .basic, .midway, .yearly{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        padding-left: 5%;
+    }
+    .basic img, .midway img, .yearly img{
+        width:30%;
+        margin:2%;
+    }
+    .box1 p, .box2 p, .box3 p{
+        font-size: .8em;
+        width: 100%;
+    }
+
+    .break-line{
+        border: 1px solid rgb(177, 177, 177);
+        border-radius:10%;
+        width:80%;
+        position: relative;
+        right: -10%;
+    }
+    #memberships{
+        position: absolute;
+        overflow:visible;
+        width:55%;
+        left:15%;
+        top:-5%;
+    }
+    .illuscontain{
+        display:none;
+        position: absolute;
+        overflow:visible;
+        width:55%;
+        left:25%;
+    }
+
+    .logo-footer{
+        display:none;
+    }
+    .flexboxcontainer{
+        display:none;
+    }
+    .logo-footer img{
+        width:15%;
+    }
+    .logo-footer p{
+        display: none;
+    }
+    .hours h1{
+        position:absolute;
+        top:0;
+        right:0;
+        padding:1%;
+        color: white;
+        font-size:1em;
+    }
+    .hours p{
+        color: rgb(245, 245, 245);
+        font-weight: normal;
+        font-size:.6em;
+        text-align: right;
+        position:absolute;
+        top:15%;
+        right:0;
+        padding:2%;
+    }
+    .hours p.hours2{
+        right:31%;
+        padding-right:2%;
+    }
+    .contacts{
+        padding:2%;
+    }
+}
+
+@media only screen and (max-width: 360px) { 
+    .menu{
+        color:rgb(20, 20, 20);
+        z-index:0;
+        position: fixed;
+        width: 45px;
+        height: 30px;
+        right: 20px;
+        top: 30px;
+        cursor: pointer;
+    }
+    .nav{
+        overflow:hidden;
+        font-weight: 500;
+        position: fixed;
+        right: -60%;
+        top: 7%;
+        padding:0;
+        margin: 0 0px;
+        transition: .75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .change-nav{
+        overflow:hidden;
+        position:static;
+        right: 4%;
+        top: 7%;
+        padding:0;
+        margin: 0 20px;
+        transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .aboutus h2{
+        overflow:hidden;
+        color:black;
+        font-weight: 700;
+        font-size: 12vw;
+        width:100vw;
+        letter-spacing: -5px;
+    }
+    .par{
+        position: absolute;
+        top:70%;
+        width:70vw;
+        font-size: 4vw;
+    }
+    .woman1, .woman2 {
+        left: 15%;
+        object-fit:cover;
+        overflow-x:visible;
+        top:0;
+        width:215vw;
+        height: 100vh; 
+    }
+    .image{
+        position: absolute;
+        right: 25%;
+        top:25%;
+        width:50vw;
+        height: 50vw;
+        border-radius: 100%;
+        overflow: hidden;
+        /* test */
+    }
+    .logo{
+        position: absolute;
+        left:3.7%;
+        bottom:73%;
+        z-index:2;
+    }
+    .logo img{
+        width: 20vw;
+    }
+    .heading{
+        color:white;
+        position: absolute;
+        left:5%;
+        bottom: 13.8%;
+        font-size: 18vw;
+        letter-spacing: -5px;
+    }
+    .heading2{
+        color:white;
+        position: absolute;
+        left:5%;
+        bottom: 10%;
+        font-size: 12vw;
+        letter-spacing: -5px;
+    }
+    .first-time{
+        position: absolute;
+        left:5%;
+        bottom:7%;
+        width: 40vw;
+        z-index:2;
+    }
+    
+    .line2{
+        opacity:0;
+    }
+    .bar{
+        background-color: #000000;
+    }
+    .hold1{
+        transform: rotate(-85deg);
+        position:absolute;
+        width: 70%;
+        left:-16%;
+        top:5%;
+        z-index: -1;
+    }
+    .hold2{
+        position:absolute;
+        width: 105vw;
+        right: -10%;
+        top:22%;
+        z-index: -1;
+    }
+    .description{
+        font-size: 5vw;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+        position: absolute;
+        bottom:-101vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .container h1{
+        position:relative;
+        width:100%;
+        text-align: center;
+        /* border: solid 2px red; */
+        top:45vh;
+    }
+    .hold4{
+        position:absolute;
+        width:55vw;
+        right:0;
+        top:290%;
+        z-index: 3;
+    }
+    .swiper {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        left: 65%;
+        top: 140%;
+        margin-left: -150px;
+        margin-top: -150px;
+        z-index: 1;
+    }
+    .text2 p{
+        font-size: .8em;
+        width:80vw;
+    }
+    .section3{
+        height: 154vh;
+    }
+    .section4{
+        height: 250vh;
+        width:100vw;
+        position:relative;
+        overflow:hidden;
+        top:200px;
+    }
+    .box2{
+        border-radius: 2%;
+        height: 103vh;
+        width: 80vw;
+        position: absolute;
+        left:-10%;
+        overflow:visible;
+    }
+    .box3{
+        border-radius: 2%;
+        height: 80vh;
+        width: 80vw;
+        position: absolute;
+        top:133vh;
+        left:-10%;
+        overflow:visible;
+    }
+    .basic, .midway, .yearly{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        padding-left: 5%;
+    }
+    .basic img, .midway img, .yearly img{
+        width:30%;
+        margin:2%;
+    }
+    .box1 p, .box2 p, .box3 p{
+        font-size: .8em;
+        width: 100%;
+    }
+
+    .break-line{
+        border: 1px solid rgb(177, 177, 177);
+        border-radius:10%;
+        width:80%;
+        position: relative;
+        right: -10%;
+    }
+    #memberships{
+        position: relative;
+        top:18%;
+        left:20%;
+    }
+    .illuscontain{
+      position: absolute;
+      overflow:visible;
+      width:55%;
+      left:25%;
+    }
+    .logo-footer{
+        display:none;
+    }
+    .flexboxcontainer{
+        display:none;
+    }
+    .logo-footer img{
+        width:15%;
+    }
+    .logo-footer p{
+        display: none;
+    }
+    .hours h1{
+        position:absolute;
+        top:0;
+        padding:1%;
+        color: white;
+        font-size:1em;
+    }
+    .hours p{
+        color: rgb(245, 245, 245);
+        font-weight: normal;
+        font-size:.6em;
+        text-align: right;
+        position:absolute;
+        top:15%;
+        right:0;
+        padding:2%;
+    }
+    .hours p.hours2{
+        right:31%;
+        padding-right:2%;
+    }
+    .contacts{
+        padding:2%;
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75vw;
+        margin:0;
+        position: relative;
+        top:28vh;
+        left: 50%;
+        transform: translate(-70%, -50%) scale(.75);
+     }
+     .illuscontain{
+        position: absolute;
+        overflow:visible;
+        top:0;
+    }
+    .hours h1{
+        position:absolute;
+        top:0;
+        right:0;
+        padding:1%;
+        color: white;
+        font-size:.8em;
+    }
+    .hours p{
+        color: rgb(245, 245, 245);
+        font-weight: normal;
+        font-size:.4em;
+        text-align: right;
+        position:absolute;
+        top:15%;
+        right:0;
+        padding:2%;
+    }
+    .hours p.hours2{
+        right:31%;
+        padding-right:2%;
+    }
+    .contacts{
+        color:white;
+        padding:2%;
+        line-height: 5%;
+        font-size:.8em;
+    }
+    .contacts p{
+        display:none;
+    }
+    #s3heading{
+        letter-spacing: .1em;
+    }
+    #wallHead{
+        letter-spacing: .1em;
+    }
+    .line{
+        position: absolute;
+        border-left: 4px solid rgb(29, 29, 29);
+        height: 90px;
+        top:325%;
+        left: 50%;
+        z-index: 2;
+    }
+    .line2{
+        display:none;
+    }
+    }

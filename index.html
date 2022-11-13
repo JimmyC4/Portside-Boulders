@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.57/dist/themes/light.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portside Boulders</title>
+    <!-- Favicon! -->
+    <link rel="icon" href="images/hold4.png">
+    
+</head>
+<body>
+    <!-- Loading audio for hamburger menu -->
+    <audio id="sound1" src="audio/click-sound.mp3" preload="auto"></audio>
+    <audio id="sound2" src="audio/hover-sound.mp3" preload="auto"></audio>
+    
+    <div class="hamburger">
+        <div class="menu-box">
+        <div class="menu" onclick="onClickMenu()">
+            <div class="bar1 bar"></div>
+            <div class="bar2 bar"></div>
+            <div class="bar3 bar"></div>
+        </div>
+        <ul class="nav noselect">
+            <li><a href='#sec-1' onmouseenter="onHoverMenu()">Home</a></li>
+            <li><a href='#sec-2' onmouseenter="onHoverMenu()">About</a></li>
+            <!-- <li><a href='#sec-3' onmouseenter="onHoverMenu()">First-visit?</a></li> -->
+            <li><a href='#sec-4' onmouseenter="onHoverMenu()">Pricing</a></li>
+            <li><a href='#' onmouseenter="onHoverMenu()">Classes</a></li>
+            <li><a href='#' onmouseenter="onHoverMenu()">Youth-programs</a></li>
+            <li><a href='#' onmouseenter="onHoverMenu()">Groups</a></li>
+            <li><a href='#' onmouseenter="onHoverMenu()">Shop</a></li>
+            <li><a href='https://www.instagram.com/portsideboulders_oconnor/' target="_blank" class="fab fa-instagram" onmouseenter="onHoverMenu()"></a></li>
+            <li><a href='https://www.facebook.com/PortsideBouldersOConnor' target="_blank" class="fab fa-facebook-f" onmouseenter="onHoverMenu()"></a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="large-container">
+        <!-- Homepage Scroll Animation using Keyframes(CSS) -->
+        <a href="#sec-2" class="scroll"><div class="scroll-down"></div></a>
+        <!------------------------- SECTION1 ------------------------->
+        <section class="section1" id="sec-1">
+            <div class="homepage">              
+                <div class="content">
+                    <img class="background" src="images/background.png" alt="">
+                    <img class="logo" src="images/logo.png" alt="" />
+                    <img class="woman1" src="images/woman1.png" alt="">
+                    <h1 class="heading"> Perths #1</h1>
+                    <h1 class="heading2"> bouldering gym.</h1>
+                    <img class="woman2" src="images/woman2.png" alt="">
+                    <div class="empty-space"></div>
+                    <img class="first-time" src="images/first-time.png" alt="">     
+                </div>
+            </div>
+        </section>
+        <!------------------------- SECTION2 ------------------------->
+        <br><br><br>
+        <section class="section2" id="sec-2">
+            <div class="line2"></div>
+                <!-- <div class="topbar"></div> -->
+                <div class="empty-space"></div>
+                <img class="hold1 fade" src="images/hold1.png" alt="">
+                <img class="hold2" src="images/hold2.png" alt="">
+                <img class="hold3" src="images/hold3.png" alt="">
+                <div class="image">
+                    <img src="images/jump.jpeg" data-speed="10" class="woman3" alt="">
+                </div>
+                <div class="trigger1">
+                <div class="aboutus">
+                    <div class="text">
+                        <h2 class="fade-in1">About us</h2>
+                        <p class="par">Portside Boulders is an indoor rock climbing gym, 
+                            providing an exhilirating experience for all climbers. 
+                            From beginners to veteran climbers, we cater to all and 
+                            strive to help you</p>
+                    </div>
+                </div>
+            </div>
+                <!-- SECTION2.1 -->
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <div class="walls">
+                    <h2 class="fade-in2">Walls</h2>
+                    <br><br><br><br><br>
+    
+                    <div class="container">
+                        
+                        <div class="buttons">
+                            <sl-button class="press-button button1">WHALE</sl-button>
+                            <sl-button class="press-button button2">SUN</sl-button>
+                            <sl-button class="press-button button3">PEARL</sl-button>
+                            <sl-button class="press-button button4">COMP</sl-button>
+                        </div>
+                        <div class="fourwalls">
+                            <!-- <div class="circle1"></div>
+                            <div class="circle2"></div>
+                            <div class="circle3"></div>
+                            <div class="circle4"></div> -->
+                            
+                            <div class="image1 wallComplete">
+                                <img class="whale" src="images/whale.png" alt="">
+                            </div>
+                            <div class="image2 wallComplete">
+                                <img class="sun" src="images/sun.png" alt="">
+                            </div>
+                            <div class="image3 wallComplete">
+                                <img class="pearl" src="images/pearl.png" alt="">
+                            </div>
+                            <div class="image4 wallComplete">
+                                <img class="comp" src="images/comp.png" alt="">
+                            </div>
+                        </div>
+                         <h1 id="chngHeading">WHALE</h1>
+                          <p class="description">The front of the whale tail will be Portside's 
+                            most overhung piece of real estate maxing out at 68° degrees. The 
+                            sides and back of this freestanding piece of climbing goodness will 
+                            include vertical and slab climbing to make this magnificent island 
+                            truly versatile.</p>
+                    </div>
+                </div>
+        </section>
+        <!-- MIDSECTION CONNECTION IMAGES -->
+        <!-- <div class="line"></div> -->
+        <img class="hold4 layer" src="images/hold4cut.png" alt="">
+        <!------------------------- SECTION3 ------------------------->
+        <br><br><br><br><br>
+        <section class="section3" id="sec-3">
+            
+            <div class="content3">
+                <div class="text2">
+                    <h2 id="s3heading" class="fade-in4">First Time?</h2>
+                    <h1>WHAT IS <span style="color: #4caaf1">BOULDERING</span>?</h1>
+                    <p>Bouldering is a form of rock climbing on 4.5 meter high climbing walls. 
+                        “Problems” are climbed without ropes or harnesses with one person climbing 
+                        at a time. There is no need for belayers so all participants are free to climb 
+                        at their own pace.
+                        <br> Portside Boulders has over 100 problems available within the one bouldering area 
+                        at any one time. Problems stay on the wall for 4 weeks before being changed. So there 
+                        will always be something new to climb at Portside!
+                    </p>
+                </div>
+                <div class="swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="images/boulder1.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/boulder3.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/boulder2.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/boulder4.jpeg" alt=""></div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <!------------------------- SECTION4 ------------------------->
+        <section class="section4" id="sec-4">
+            <!-- SVG Illustration -->
+            <div class="container-s4">
+            <div class="illuscontain">    
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.47 480.68">
+                <defs>
+                   <style>.cls-1{fill:#a97c50;}.cls-2{fill:#009093;}.cls-3{fill:#fff;}.cls-4,.cls-5{fill:#c49a6c;}.cls-5{stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;}</style>
+                </defs>
+                <g id="thumb">
+                   <path class="cls-1" d="M772,438s33.85-117.5,54.41-171.24c12.88-42.81,76.7-42.81,62.43,15.16-10.22,75.12-58.42,229.22-58.42,229.22S767.57,532.55,772,438Z" transform="translate(-520.71 -107.21)"/>
+                </g>
+                <g id="card">
+                   <rect class="cls-2" x="686.44" y="136.33" width="246.37" height="89.33" rx="9" transform="translate(-443.29 -316.27) rotate(15.44)"/>
+                   <circle class="cls-3" cx="384.38" cy="100.16" r="9.92"/>
+                   <path class="cls-3" d="M785,170.65l1.66-6.07-4.36,4.18-1.06-.3-1.61-5.69L778,168.72l-2.19-.61L778.62,158l1.94.53,2.05,7.34,5.47-5.26,1.92.53-2.77,10.13Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M798,172.21l-.52,1.88-7.84-2.17,2.8-10.12,7.65,2.12-.52,1.87-5.32-1.47-.61,2.2,4.7,1.3-.5,1.82-4.7-1.3-.65,2.35Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M808.54,177.15l1.67-6.08-4.36,4.18-1.06-.29-1.62-5.69-1.64,5.94-2.19-.61,2.79-10.12,1.94.54,2,7.33,5.47-5.26,1.92.54-2.77,10.12Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M823.19,178.22c-.48,1.75-2.15,2.38-4.81,1.64l-5.24-1.44,2.8-10.12,4.94,1.36c2.53.7,3.54,2.12,3.11,3.69a2.55,2.55,0,0,1-2,1.86A2.59,2.59,0,0,1,823.19,178.22Zm-2.29-.9c.23-.85-.3-1.43-1.52-1.77l-2.73-.75-.69,2.5,2.73.75C819.91,178.39,820.66,178.19,820.9,177.32Zm-3.12-6.62-.66,2.39,2.33.64c1.14.32,1.87.08,2.09-.71s-.29-1.36-1.43-1.67Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M832.56,181.76l-.52,1.88-7.84-2.17,2.8-10.12,7.65,2.12-.52,1.88-5.32-1.48-.61,2.2,4.7,1.3-.5,1.82-4.7-1.3-.65,2.35Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M840.35,185.94l-1.17-3.36-.12,0-2-.56-.78,2.82-2.34-.65L836.7,174l4.38,1.21c2.71.75,4,2.62,3.38,4.89a3.41,3.41,0,0,1-3,2.62l1.37,3.88Zm.07-8.82-1.9-.53-1,3.53,1.91.52c1.43.4,2.34-.07,2.64-1.17S841.86,177.51,840.42,177.12Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M844,185.87l1.28-1.54a6.26,6.26,0,0,0,3.05,2c1.39.38,2.08.07,2.25-.55.53-1.89-5.72-2.22-4.68-6,.48-1.72,2.26-2.77,5.14-2a6.93,6.93,0,0,1,3.26,1.87l-1.21,1.58a5.79,5.79,0,0,0-2.59-1.57c-1.38-.39-2.06,0-2.24.62-.51,1.87,5.73,2.2,4.7,5.92-.47,1.69-2.27,2.75-5.16,2A7.53,7.53,0,0,1,844,185.87Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M865.83,182.08,863,192.2l-2.34-.65,1.14-4.14-4.6-1.27-1.14,4.14-2.34-.64,2.79-10.12,2.34.64-1.1,4,4.6,1.27,1.1-4Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M868.23,182.74l2.35.65-2.8,10.12-2.34-.65Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M880.74,190.15c-.62,2.26-2.7,3.19-5.41,2.45l-2-.57-.77,2.79-2.34-.64,2.8-10.13,4.38,1.22C880.06,186,881.37,187.88,880.74,190.15Zm-2.37-.65c.3-1.12-.24-2-1.67-2.36l-1.91-.53-1,3.51,1.91.53C877.16,191.05,878.06,190.6,878.37,189.5Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M802.24,188.63a5.79,5.79,0,0,1,10.61-.77l-1.88,1a3.43,3.43,0,0,0-2.22-1.89,3.36,3.36,0,0,0-1.79,6.48,3.35,3.35,0,0,0,2.87-.49l1.13,1.8a5.78,5.78,0,0,1-8.72-6.1Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M819.14,196.41l-4.7-1.29L813,197l-2.4-.67,7.31-8.87,2.31.64,1.73,11.37-2.46-.68Zm-.24-2-.54-4.32-2.67,3.44Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M829.4,201.58l-1.17-3.36-.12,0-2-.56-.78,2.82L823,199.8l2.8-10.12,4.38,1.21c2.7.75,4,2.62,3.38,4.89a3.41,3.41,0,0,1-3,2.62l1.38,3.88Zm.07-8.82-1.91-.52-1,3.52,1.91.53c1.43.4,2.34-.07,2.64-1.17S830.9,193.16,829.47,192.76Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-3" d="M836.38,192.62l4.59,1.27c3.31.91,5,3.53,4.19,6.6s-3.67,4.43-7,3.52l-4.6-1.27Zm2.21,9.43a3.26,3.26,0,1,0,1.74-6.27l-2.14-.59-1.74,6.27Z" transform="translate(-520.71 -107.21)"/>
+                </g>
+                <g id="hand">
+                   <path class="cls-4" d="M558.8,419.76l227.71-94S841.93,439,834.7,504.1C827.6,568,664.82,685.32,564.26,434Q561.5,427,558.8,419.76Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-4" d="M578.19,461.42,522.77,340.94c-12.65-29.65,36.55-65.12,55.42-20.48l56.28,117.73s-40-106.17-55.85-139.42,35-67.58,55.85-19.28C664.33,343.33,694,413.62,694,413.62s-28.8-118.69-41.12-159.43,42-60.8,54.21-18.07l44.4,153.77-35-168.23c-10.11-44.25,46.93-58.85,56.9-10.84L805.9,367.44S760.12,555.4,578.19,461.42Z" transform="translate(-520.71 -107.21)"/>
+                   <path class="cls-5" d="M522.33,191.19" transform="translate(-520.71 -107.21)"/>
+                </g>
+                </svg>
+            </div>
+            <!-- Membership Section surrounds SVG -->
+            <div id="memberships">
+                <div class="box2">
+                    <h3 class="fade-in5">MEMBERSHIPS</h3>
+                    <p><i>Unlimited facility access and 1 studio class per calendar month</i></p>
+                    <div class="basic">
+                        <img src="images/basicmonthly.png" alt="" class="member-img">
+                        <p>$29 per week
+                            Min 4 week commitment
+                            Payments debited weekly</p>
+                    </div>
+                    <div class="basic">
+                        <img src="images/basicyearly.png" alt="" class="member-img">
+                        <p>$23 per week
+                            Min 52 week commitment
+                            Payments debited weekly</p>
+                    </div>
+                    <div class="break-line"></div>
+                    <p><i>Unlimited facility access and 1 studio class per week</i></p>
+                    <div class="midway">
+                        <img src="images/midwaymonthly.png" alt="" class="member-img">
+                        <p>$29 per week
+                            Min 4 week commitment
+                            Payments debited weekly</p>
+                    </div>
+                    <div class="midway">
+                        <img src="images/midwayyearly.png" alt="" class="member-img">
+                        <p>$23 per week
+                            Min 52 week commitment
+                            Payments debited weekly</p>
+                    </div>
+                </div>
+                    
+                    <div class="box3">
+                        <div class="break-line"></div>
+                        <p><i>Unlimited facility access and 2 studio classes per week</i></p>
+                        <div class="yearly">
+                            <img src="images/premiummonthly.png" alt="" class="member-img">
+                            <p>$23 per week
+                                Min 52 week commitment
+                                Payments debited weekly</p>
+                        </div>
+                        <div class="yearly">
+                            <img src="images/premiumyearly.png" alt="" class="member-img">
+                            <p>$23 per week
+                                Min 52 week commitment
+                                Payments debited weekly</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <br><br><br><br><br
+        <!------------------------- SECTION5 ------------------------->
+        <section class="section5" id="sec-5">
+            <div class="footer">
+                <div class="contacts">
+                    <h1>Follow us:</h1>
+                    <!-- <img id="inst" src="images/inst.png" alt="">
+                    <img id="fb" src="images/fb.png" alt=""> -->
+                    <a id="inst" href='https://www.instagram.com/portsideboulders_oconnor/' target="_blank" class="fab fa-instagram" onmouseenter="onHoverMenu()"></a>
+                    <a id="fb" href='https://www.facebook.com/PortsideBouldersOConnor' target="_blank" class="fab fa-facebook-f" onmouseenter="onHoverMenu()"></a>
+                    <p> <b>PHONE:</b> +61 421 244 870</p>
+                </div>
+                <div class="flexboxcontainer">
+                    <div class="logo-footer">
+                        <img src="images/logo2.png" alt="">
+                        <sl-button class="btn btncontact" id="root">CONTACT US</sl-button>
+                        <p>DESIGNED BY JAMES KANG</p>
+                    </div>
+                </div>
+                <div class="hours">
+                    <h1>Opening Hours</h1>
+                    <p>
+                        O’CONNOR<br>
+                        MON | 10am - 10pm<br>
+                        TUES | 6am - 10pm<br>
+                        WEDS | 10am - 10pm<br>
+                        THURS | 6am - 10pm<br>
+                        FRI | 10am - 10pm<br>
+                        SAT | 8am - 9pm<br>
+                        SUN | 8am - 7pm
+                    </p>
+                    <p class="hours2">OSBORNE PARK<br>
+                            MON | 10am - 10pm<br>
+                            TUES | 6am - 10pm<br>
+                            WEDS | 10am - 10pm<br>
+                            THURS | 6am - 10pm<br>
+                            FRI | 10am - 10pm<br>
+                            SAT & SUN | 8am - 7pm
+                    </p>
+                    <div class="hours2">
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+
+        </section>
+    </div>
+    <!-- CONFETTI! -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script> 
+    <!-- SWIPER GALLERY -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- FACEBOOK AND INSTAGRAM ICONS FROM FONTAWESOMES LIBRARY -->
+    <script src="https://kit.fontawesome.com/63de8a54c2.js" crossorigin="anonymous"></script>
+    <!-- SHOELACE COMPONENTS (4 buttons) -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.57/dist/shoelace.js/+esm"></script>
+    <!-- GSAP + SCROLLTRIGGER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <!-- CONNECTING JAVASCRIPT LAST -->
+    <script src="main.js"></script>
+</body>
+</html>
