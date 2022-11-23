@@ -256,6 +256,7 @@ a{
     z-index:2;
 } */
 .background{
+    width: 100%;
     filter: brightness(80%);
     height: 100vh;
     z-index:-2;
