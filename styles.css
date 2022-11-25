@@ -738,10 +738,15 @@ sl-button.btn::part(base):hover{
 
 /* ===== 5K RETINA MAC LABS: Media queries for Curtin Uni mac lab testing only ===== */
 @media only screen and (max-width: 5120px) {
-
+    .icons{
+        opacity: 0;
+    }
 }
 /* ===== DESKTOP HD: Media queries for most HD desktops ===== */
 @media only screen and (max-width: 1920px) {
+    .icons{
+        opacity: 1;
+    }
     
 }
 /* ===== SMALL DESKTOP: Media queries for laptop/small desktop ===== */
@@ -1085,7 +1090,7 @@ sl-button.btn::part(base):hover{
         overflow:hidden;
         font-weight: 500;
         position: fixed;
-        right: -60%;
+        right: -70%;
         top: 7%;
         padding:0;
         margin: 0 0px;
@@ -1093,11 +1098,12 @@ sl-button.btn::part(base):hover{
     }
     .change-nav{
         overflow:hidden;
-        position:static;
-        right: 4%;
+        font-weight: 500;
+        position: fixed;
+        right: 15%;
         top: 7%;
         padding:0;
-        margin: 0 20px;
+        margin: 0 0px;
         transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     .aboutus h2{
@@ -1211,7 +1217,7 @@ sl-button.btn::part(base):hover{
         width:55vw;
         right:0;
         top:290%;
-        z-index: 3;
+        z-index: -10;
     }
     .swiper {
         width: 200px;
