@@ -134,7 +134,7 @@ a{
     position: fixed;
     background-color: #D7652B;
     height: 100vh;
-    width: 352px;
+    width: 370px;
     transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 /* No select option for my html DOMS to not be selected eg. Hero image, navigation options */
